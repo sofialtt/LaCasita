@@ -180,3 +180,17 @@ main > section + section { margin-top: 30px; }
   font: 800 14px Verdana, sans-serif;
   cursor: pointer;
 }
+
+.brillo {
+  position: fixed;
+  pointer-events: none;
+  z-index: 70;
+  font-size: 14px;
+  color: #fff;
+  text-shadow: 0 0 4px var(--hot), 0 0 9px var(--hot);
+  animation: caer 0.8s ease-out forwards;
+}
+
+@keyframes caer {
+  to { transform: translateY(18px) scale(0.3); opacity: 0; }
+}
