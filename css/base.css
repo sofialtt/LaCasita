@@ -17,3 +17,14 @@ body {
   font: 600 16px/1.55 var(--body);
   background: var(--blush);
 }
+
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+h1, h2 {
+  font-family: var(--display);
+  font-weight: 400;
+}

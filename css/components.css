@@ -1,0 +1,33 @@
+.win {
+  background: var(--milk);
+  border: 3px solid var(--hot);
+  border-radius: 14px 14px 6px 6px;
+  box-shadow: 0 6px 0 rgba(229, 22, 138, 0.25);
+  overflow: hidden;
+}
+
+.tb {
+  padding: 6px 12px;
+  color: #fff;
+  font: 400 17px var(--display);
+  background: linear-gradient(#ff9ad0, var(--hot) 55%, #ff4fa8);
+}
+
+.wb {
+  padding: 16px;
+}
+
+.axes {
+    display: grind;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.axes a {
+    display: block;
+    padding: 5px;
+    margin: 5px;
+    border: 3px solid var(--hot);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--berry);
+}
