@@ -18,14 +18,14 @@
 }
 
 .axes {
-    display: grind;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 
 .axes a {
     display: block;
-    padding: 5px;
-    margin: 5px;
+    padding: 10px;
     border: 3px solid var(--hot);
     border-radius: 10px;
     text-decoration: none;
