@@ -27,109 +27,156 @@
 
 /* ventanita */
 .win {
-  background: var(--milk);
-  border: 3px solid var(--hot);
-  border-radius: 14px 14px 6px 6px;
-  box-shadow: 0 6px 0 rgba(229, 22, 138, 0.25);
-  overflow: hidden;
+    background: var(--milk);
+    border: 3px solid var(--hot);
+    border-radius: 14px 14px 6px 6px;
+    box-shadow: 0 6px 0 rgba(229, 22, 138, 0.25);
+    overflow: hidden;
 }
 .tb {
-  padding: 6px 12px;
-  color: #fff;
-  font: 400 17px var(--display);
-  background: linear-gradient(#ff9ad0, var(--hot) 55%, #ff4fa8);
+    padding: 6px 12px;
+    color: #fff;
+    font: 400 17px var(--display);
+    background: linear-gradient(#ff9ad0, var(--hot) 55%, #ff4fa8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .wb {
-  padding: 16px;
+    padding: 16px;
 }
 
 .vest {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 20px;
-  align-items: center;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
+    align-items: center;
 }
 .vest > div { min-width: 0; }
 
 .kicker {
-  margin: 0;
-  font: 400 15px var(--display);
-  color: var(--hot);
+    margin: 0;
+    font: 400 15px var(--display);
+    color: var(--hot);
 }
 .lead {
-  margin: 0 0 10px;
-  font: 600 28px/1.1 'Caveat', cursive;
+    margin: 0 0 10px;
+    font: 600 28px/1.1 'Caveat', cursive;
 }
 
 .axes {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin: 10px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 10px 0;
 }
 .axes a {
-  display: block;
-  padding: 10px;
-  border: 3px solid var(--hot);
-  border-radius: 10px;
-  text-decoration: none;
-  color: var(--berry);
-  background: linear-gradient(#fff, #ffe3f2 55%, #ffc4e3);
-  box-shadow: 0 3px 0 var(--hot);
+    display: block;
+    padding: 10px;
+    border: 3px solid var(--hot);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--berry);
+    background: linear-gradient(#fff, #ffe3f2 55%, #ffc4e3);
+    box-shadow: 0 3px 0 var(--hot);
 }
 
 .puerta {
-  display: block;
-  width: min(100%, 220px);
-  margin: 0 auto;
+    display: block;
+    width: min(100%, 220px);
+    margin: 0 auto;
 }
 .puerta svg {
-  display: block;
-  width: 100%;
-  height: auto;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .estado {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 14px;
-  font: 400 14px var(--display);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    font: 400 14px var(--display);
 }
 
 @media (max-width: 700px) {
-  .vest { grid-template-columns: 1fr; }
-  .axes { grid-template-columns: 1fr; }
+    .vest { grid-template-columns: 1fr; }
+    .axes { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .ticker span { animation: none; padding-left: 12px; }
+    
 }
 
 main > section + section { margin-top: 30px; }
 
 .eje {
-  margin: 0;
-  font: 400 14px var(--display);
-  color: var(--hot);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+    margin: 0;
+    font: 400 14px var(--display);
+    color: var(--hot);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.poemaCristina {
+    text-align: center;
 }
 
 .escena {
-  border: 3px solid #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 0 0 2px var(--rose);
-  background: #fff;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 0 2px var(--rose);
+    background: #fff;
 }
 .escena svg {
-  display: block;
-  width: 100%;
-  height: auto;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .escritorio {
     fill: #fff4fa;
     stroke: #e5168a;
     stroke-width: 3;
+}
+
+.cuaderno { fill: #ff7cc2; stroke: #fff; stroke-width: 3; }
+
+.objeto { cursor: pointer; }
+.objeto:focus { outline: none; }
+
+.halo {
+    fill: none;
+    stroke: var(--hot);
+    stroke-width: 4;
+    stroke-dasharray: 7 6;
+    opacity: 0;
+    pointer-events: all;
+    transition: opacity 0.15s;
+}
+.objeto:hover .halo,
+.objeto:focus-visible .halo { opacity: 1; }
+
+.fondo {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(107, 17, 72, 0.5);
+}
+.fondo[hidden] { display: none; }
+.fondo .win { width: min(560px, 100%); max-height: 100%; overflow: auto; }
+
+.cerrar {
+  width: 30px;
+  height: 26px;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  background: linear-gradient(#ffd0e8, #ff3f9f);
+  color: #fff;
+  font: 800 14px Verdana, sans-serif;
+  cursor: pointer;
 }
