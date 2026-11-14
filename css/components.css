@@ -18,7 +18,6 @@
   to { transform: translateX(-100%); }
 }
 
-/* techo */
 .techo {
   display: block;
   width: 100%;
@@ -44,7 +43,6 @@
   padding: 16px;
 }
 
-/* vestíbulo: dos columnas */
 .vest {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
@@ -63,7 +61,6 @@
   font: 600 28px/1.1 'Caveat', cursive;
 }
 
-/* tarjetas de los ejes */
 .axes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -81,7 +78,6 @@
   box-shadow: 0 3px 0 var(--hot);
 }
 
-/* puerta */
 .puerta {
   display: block;
   width: min(100%, 220px);
@@ -93,7 +89,6 @@
   height: auto;
 }
 
-/* estado */
 .estado {
   display: flex;
   flex-wrap: wrap;
@@ -101,13 +96,40 @@
   font: 400 14px var(--display);
 }
 
-/* celular: todo en una columna */
 @media (max-width: 700px) {
   .vest { grid-template-columns: 1fr; }
   .axes { grid-template-columns: 1fr; }
 }
 
-/* respeta a quien desactivó las animaciones */
 @media (prefers-reduced-motion: reduce) {
   .ticker span { animation: none; padding-left: 12px; }
+}
+
+main > section + section { margin-top: 30px; }
+
+.eje {
+  margin: 0;
+  font: 400 14px var(--display);
+  color: var(--hot);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.escena {
+  border: 3px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 0 2px var(--rose);
+  background: #fff;
+}
+.escena svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.escritorio {
+    fill: #fff4fa;
+    stroke: #e5168a;
+    stroke-width: 3;
 }
