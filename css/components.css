@@ -1,3 +1,32 @@
+/* franja que se desplaza */
+.ticker {
+  margin-bottom: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  background: var(--hot);
+  color: #fff;
+  border-radius: 999px;
+  padding: 5px 0;
+  font: 400 15px var(--display);
+}
+.ticker span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: desplazar 30s linear infinite;
+}
+@keyframes desplazar {
+  to { transform: translateX(-100%); }
+}
+
+/* techo */
+.techo {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: -4px;
+}
+
+/* ventanita */
 .win {
   background: var(--milk);
   border: 3px solid var(--hot);
@@ -5,29 +34,80 @@
   box-shadow: 0 6px 0 rgba(229, 22, 138, 0.25);
   overflow: hidden;
 }
-
 .tb {
   padding: 6px 12px;
   color: #fff;
   font: 400 17px var(--display);
   background: linear-gradient(#ff9ad0, var(--hot) 55%, #ff4fa8);
 }
-
 .wb {
   padding: 16px;
 }
 
-.axes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+/* vestíbulo: dos columnas */
+.vest {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+.vest > div { min-width: 0; }
+
+.kicker {
+  margin: 0;
+  font: 400 15px var(--display);
+  color: var(--hot);
+}
+.lead {
+  margin: 0 0 10px;
+  font: 600 28px/1.1 'Caveat', cursive;
 }
 
+/* tarjetas de los ejes */
+.axes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 10px 0;
+}
 .axes a {
-    display: block;
-    padding: 10px;
-    border: 3px solid var(--hot);
-    border-radius: 10px;
-    text-decoration: none;
-    color: var(--berry);
+  display: block;
+  padding: 10px;
+  border: 3px solid var(--hot);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--berry);
+  background: linear-gradient(#fff, #ffe3f2 55%, #ffc4e3);
+  box-shadow: 0 3px 0 var(--hot);
+}
+
+/* puerta */
+.puerta {
+  display: block;
+  width: min(100%, 220px);
+  margin: 0 auto;
+}
+.puerta svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* estado */
+.estado {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  font: 400 14px var(--display);
+}
+
+/* celular: todo en una columna */
+@media (max-width: 700px) {
+  .vest { grid-template-columns: 1fr; }
+  .axes { grid-template-columns: 1fr; }
+}
+
+/* respeta a quien desactivó las animaciones */
+@media (prefers-reduced-motion: reduce) {
+  .ticker span { animation: none; padding-left: 12px; }
 }

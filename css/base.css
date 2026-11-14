@@ -1,5 +1,6 @@
 :root {
   --blush: #ffd9ec;
+  --dot: #ffb8dc;
   --petal: #ffe8f4;
   --milk: #fff7fb;
   --rose: #ff7cc2;
@@ -15,7 +16,12 @@ body {
   margin: 0;
   color: var(--berry);
   font: 600 16px/1.55 var(--body);
-  background: var(--blush);
+  background-color: var(--blush);
+  background-image:
+    radial-gradient(var(--dot) 22%, transparent 24%),
+    radial-gradient(var(--dot) 22%, transparent 24%);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
 }
 
 main {
@@ -27,4 +33,20 @@ main {
 h1, h2 {
   font-family: var(--display);
   font-weight: 400;
+}
+
+h1 {
+  margin: 4px 0 6px;
+  font-size: clamp(46px, 11vw, 92px);
+  line-height: 1;
+  background:
+    radial-gradient(circle at 20% 30%, #fff 0 1.5px, transparent 2px) 0 0 / 17px 17px,
+    radial-gradient(circle at 70% 70%, #fff 0 1.5px, transparent 2px) 0 0 / 23px 23px,
+    linear-gradient(#ff9ad0, #e5168a 60%, #9b7bff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+  paint-order: stroke fill;
+  filter: drop-shadow(0 3px 0 rgba(229, 22, 138, 0.45));
 }
