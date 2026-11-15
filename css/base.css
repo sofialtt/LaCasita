@@ -50,3 +50,19 @@ h1 {
   paint-order: stroke fill;
   filter: drop-shadow(0 3px 0 rgba(229, 22, 138, 0.45));
 }
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gif {
+  width: 90px;
+  height: auto;
+  flex: none;
+}
+
+.info p {
+  margin: 0;
+}
