@@ -18,6 +18,15 @@
   to { transform: translateX(-100%); }
 }
 
+/* nav tipo buddy list */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--petal);border:3px solid var(--hot);border-radius:12px;padding:6px 8px;box-shadow:0 4px 0 rgba(229,22,138,.25)}
+.nav-in{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;align-items:center}
+.nav-in::-webkit-scrollbar{display:none}
+.nav b{font:400 14px var(--display);color:var(--hot);white-space:nowrap;padding-right:4px}
+.btn{font:800 14px/1 var(--body);color:var(--berry);padding:10px 15px;border:2px solid var(--hot-light);border-radius:999px;background:linear-gradient(#fff 0,#ffe3f2 46%,#ffa8d5 50%,#ffd2e9 100%);box-shadow:0 2px 0 var(--hot),inset 0 1px 0 #fff;cursor:pointer;text-decoration:none;display:inline-block;white-space:nowrap}
+.btn:hover{filter:brightness(1.05)}
+.btn:active{transform:translateY(1px)}
+
 .techo {
   display: block;
   width: 100%;

@@ -1,13 +1,19 @@
 :root {
-  --blush: #ffd9ec;
-  --dot: #ffb8dc;
-  --petal: #ffe8f4;
-  --milk: #fff7fb;
-  --rose: #ff7cc2;
-  --hot: #e5168a;
-  --berry: #6b1148;
-  --display: 'DotGothic16', monospace;
-  --body: 'Nunito', Verdana, sans-serif;
+  --blush:#ffd9ec; 
+  --dot:#ffb8dc; 
+  --petal:#ffe8f4; 
+  --milk:#fff7fb;
+  --rose:#ff7cc2; 
+  --hot:#e5168a; 
+  --hot-light:#ff5db1; 
+  --berry:#6b1148; 
+  --link:#a8005f;
+  --violet:#9b7bff; 
+  --sky:#58b8ff; 
+  --ruby:#e3224f; 
+  --mint:#7ed6a5;
+  --display:'DotGothic16','Courier New',monospace;
+  --body:'Nunito',Verdana,Tahoma,sans-serif;
 }
 
 * { box-sizing: border-box; }
