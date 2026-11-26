@@ -11,11 +11,10 @@ function abrirVentana(clave) {
   document.querySelector('#modal-encabezado').textContent = datos.encabezado;
   document.querySelector('#modal-autora').textContent = 'de ' + datos.autora;
   document.querySelector('#modal-texto').textContent = datos.texto;
-  document.querySelector('#modal-poema').textContent = datos.poema;
 
 
   const enlace = document.querySelector('#modal-enlace');
-  enlace.textContent = datos.enlaceTexto + ' ↗';
+  enlace.textContent = datos.enlaceTexto;
   enlace.href = datos.enlaceUrl;
 
   ultimoFoco = document.activeElement;

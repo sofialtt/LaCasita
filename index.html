@@ -137,24 +137,60 @@
           </svg>
         </div>
       </div>
+      <div class="fondo" id="fondo" hidden>
+        <div class="win" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+          <div class="tb">
+            <span id="modal-titulo">cuaderno.txt</span>
+            <button class="cerrar" id="cerrar" type="button" aria-label="Cerrar ventana">×</button>
+          </div>
+          <div class="wb" id="poema">
+            <p class="eje" id="modal-eje"></p>
+            <h3 id="modal-encabezado"></h3>
+            <p id="modal-autora"></p>
+            <p id="modal-texto"></p>
+            <p><a id="modal-enlace" href="#" target="_blank" rel="noopener noreferrer"></a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="proyeccion" class="win">
+      <div class="tb">proyeccion.exe</div>
+      <div class="wb">
+        <p class="eje">Eje · Pertenencia</p>
+        <h2>proyeccion sobre cortinas</h2>
+        <p>Amistad, amor y relaciones: a quién pertenezco y quién me cuenta.</p>
+        <div class="escena">
+          <svg viewBox="0 0 800 480" role="group" aria-label="Una sala con un proyector que lanza una película sobre unas cortinas blancas">
+            <defs>
+              <pattern id="rayas" width="40" height="40" patternUnits="userSpaceOnUse">
+                <rect width="40" height="40" fill="#f2e8ff"/>
+                <rect width="20" height="40" fill="#ffe3f1"/>
+              </pattern>
+            </defs>
+
+            <!-- pared, piso y zócalo -->
+            <rect width="800" height="380" fill="url(#rayas)"/>
+            <rect y="380" width="800" height="100" fill="#ffb3da"/>
+            <rect y="372" width="800" height="12" fill="#fff4fa"/>
+
+            <!-- cortina del centro y su barra -->
+            <rect x="272" y="54" width="366" height="12" rx="6" fill="#ff7cc2"/>
+            <rect x="290" y="66" width="330" height="236" fill="#fff" stroke="#ffd0e8" stroke-width="2"/>
+
+            <!-- lz y pelicula -->
+            <polygon points="188,256 330,102 580,102 580,236 330,236" fill="#fff" opacity="0.5"/>
+            <rect x="330" y="102" width="250" height="134" rx="4" fill="#d9c8ff" stroke="#fff" stroke-width="3"/>
+            <path d="M447 154l26 15-26 15Z" fill="#e5168a"/>
+
+            <!-- proyector -->
+             
+          </svg>
+        </div>
+
+      </div>
     </section>
   </main>
-  <div class="fondo" id="fondo" hidden>
-    <div class="win" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
-      <div class="tb">
-        <span id="modal-titulo">cuaderno.txt</span>
-        <button class="cerrar" id="cerrar" type="button" aria-label="Cerrar ventana">×</button>
-      </div>
-      <div class="wb">
-        <p class="eje" id="modal-eje"></p>
-        <h3 id="modal-encabezado"></h3>
-        <p id="modal-autora"></p>
-        <p id="modal-texto"></p>
-        <p id="modal-poema"></p>
-        <p><a id="modal-enlace" href="#" target="_blank" rel="noopener noreferrer"></a></p>
-      </div>
-    </div>
-  </div>
+  
   <script defer src="js/data.js"></script>
   <script defer src="js/modal.js"></script>
   <script defer src="js/efectos.js"></script>

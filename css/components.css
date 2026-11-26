@@ -52,7 +52,12 @@
     align-items: center;
 }
 .wb {
-    padding: 16px;
+    padding: 15px;  
+}
+
+#poema {
+    white-space: pre-line;
+    text-align: center;
 }
 
 .vest {
